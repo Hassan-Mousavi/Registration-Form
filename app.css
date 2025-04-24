@@ -22,14 +22,17 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   display: none;
-  position: absolute;
-  right: 60rem;
 }
 .correct {
   fill: green;
+  position: absolute;
+  right: 22rem;
 }
 .false {
+  /* display: none; */
   fill: red;
+  position: absolute;
+  right: 22rem;
 }
 .input {
   display: flex;
