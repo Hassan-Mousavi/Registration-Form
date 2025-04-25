@@ -8,18 +8,20 @@
   </head>
   <body>
     <div class="container">
-      <form action="#" class="registration">
+      <form action="#" class="registration" id="form">
         <h1 class="form_header">REGISTRATION FORM</h1>
         <div class="form_details">
           <!-- UserName -->
           <p class="form_username">Username</p>
           <div class="input_container">
             <input
+              id="username"
               type="text"
               class="form_input username_input"
               placeholder="Enter your name"
+              autocomplete="off"
             />
-            <svg class="form_icon correct" id="" viewBox="0 0 512 512">
+            <svg class="form_icon correct" viewBox="0 0 512 512">
               <path
                 d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"
               />
@@ -35,6 +37,7 @@
           <p class="form_useremail">Email</p>
           <div class="input_container">
             <input
+              id="email"
               type="email"
               class="form_input email_input"
               placeholder="Enter your email"
@@ -54,6 +57,7 @@
           <p class="form_userpassword">Password</p>
           <div class="input_container">
             <input
+              id="password"
               type="password"
               class="form_input password_input"
               placeholder="Enter your password"
@@ -75,6 +79,7 @@
           <p class="form_userpassword">Retype Password</p>
           <div class="input_container">
             <input
+              id="retypepass"
               type="password"
               class="form_input repassword_input"
               placeholder="Enter password again"

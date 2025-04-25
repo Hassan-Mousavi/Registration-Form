@@ -1,47 +1,47 @@
 const formInput = document.querySelectorAll(".form_input");
-const userInput = document.querySelector(".username_input");
-const emailInput = document.querySelector(".email_input");
+const userInput = document.getElementById("username");
+const emailInput = document.getElementById("email");
 const btnSubmit = document.querySelector(".btn_submit");
 const formIcons = document.querySelectorAll(".form_icon");
-const correctIcon = document.querySelector(".correct");
-const falseIcon = document.querySelector(".false");
-// userName
-const validation = function () {
-  formInput.forEach((i) => {
-    if (i.textContent === "") {
-      falseIcon.style.display = "block";
-      correctIcon.style.display = "none";
+const correctIcon = document.querySelectorAll(".correct");
+const falseIcon = document.querySelectorAll(".false");
+
+const showBorder = function () {
+  formInput.forEach((e, i) => {
+    if (e.value === "") {
+      e.style.borderColor = "red";
     } else {
-      correctIcon.style.display = "block";
-      falseIcon.style.display = "none";
+      e.style.borderColor = "green";
     }
+    console.log(e);
   });
 };
-
-const userName = function () {
-  if (userInput.value === "") {
-    userInput.style.borderColor = "red";
-    // falseIcon.style.display = "block";
-    // correctIcon.style.display = "none";
-  } else {
-    userInput.style.borderColor = "green";
-    // correctIcon.style.display = "block";
-    // falseIcon.style.display = "none";
-  }
+const correctIcons = function () {
+  correctIcon.forEach((e, i) => {
+    if (formInput.value !== "") {
+      e.style.display = "block";
+    } else {
+      e.style.display = "none ";
+    }
+    console.log(e);
+  });
 };
-
-const userEmail = function () {
-  if (emailInput.value === "") {
-    emailInput.style.borderColor = "red";
-  } else {
-    emailInput.style.borderColor = "green";
-  }
+const falseIcons = function () {
+  falseIcon.forEach((e, i) => {
+    if (formInput.value === "") {
+      e.style.display = "block";
+    } else {
+      e.style.display = "none";
+    }
+    console.log(e);
+  });
 };
 
 // submit btn
 btnSubmit.addEventListener("click", function (e) {
   e.preventDefault();
-  validation();
-  userName();
-  userEmail();
+  showBorder();
+  correctIcons();
+  falseIcons();
+  // userName();
 });

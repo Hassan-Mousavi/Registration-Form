@@ -9,6 +9,7 @@ html {
 body {
   background-color: #ebe6e6;
   font-family: tahoma;
+  font-size: 1.8rem;
 }
 .container {
   width: 40rem;
@@ -29,7 +30,6 @@ body {
   right: 22rem;
 }
 .false {
-  /* display: none; */
   fill: red;
   position: absolute;
   right: 22rem;
@@ -72,6 +72,7 @@ body {
   justify-content: space-between;
   margin-bottom: 1.5rem;
 }
+
 .form_input {
   padding: 1rem;
   width: 100%;
